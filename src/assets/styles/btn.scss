@@ -1,0 +1,192 @@
+@import './variables.scss';
+
+@mixin colorBtn($color) {
+  // min-width: 130px;
+  background: $color;
+
+  &:hover {
+    color: $color;
+
+    &:before,
+    &:after {
+      background: $color;
+    }
+  }
+}
+
+
+.pink-btn {
+  @include colorBtn($pink)
+}
+
+.green-btn {
+  @include colorBtn($green)
+}
+
+.tiffany-btn {
+  @include colorBtn($tiffany)
+}
+
+
+
+.pan-btn {
+  font-size: 14px;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: 600ms ease all;
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    background: #fff;
+
+    &:before,
+    &:after {
+      width: 100%;
+      transition: 600ms ease all;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    transition: 400ms ease all;
+  }
+
+  &::after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.custom-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  color: #fff;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.dark-green-btn {
+  @include colorBtn($darkGreen);
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: #fff;
+    border-color: $darkGreen;
+    background-color: $darkGreen;
+  }
+}
+
+.light-green-btn {
+  @include colorBtn($lightGreen);
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: #fff;
+    border-color: $lightGreen;
+    background-color: $lightGreen;
+  }
+}
+
+.gray-btn {
+  @include colorBtn($gray);
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: #fff;
+    border-color: $gray;
+    background-color: $gray;
+  }
+}
+
+.red-btn {
+  @include colorBtn($red);
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: #fff;
+    border-color: $red;
+    background-color: $red;
+  }
+}
+
+.yellow-btn {
+  @include colorBtn($yellow);
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: #fff;
+    border-color: $yellow;
+    background-color: $yellow;
+  }
+}
+
+.blue-btn {
+  @include colorBtn($blue);
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: #fff;
+    border-color: $blue;
+    background-color: $blue;
+  }
+}
+
+.light-blue-btn {
+  @include colorBtn($light-blue);
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: #fff;
+    border-color: $light-blue;
+    background-color: $light-blue;
+  }
+}
